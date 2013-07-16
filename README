@@ -1,31 +1,23 @@
 Various exercices from coursera.com
-Each directories should be named against the course it represents and contain a README explaining the
-purpose of each snippet of code. 
+Each directories should be named against the course it represents and contain a README explaining the purpose of each snippet of code. 
 Feel free to fork it and contribute to it.
 No particular language is required. 
 
-Various exercices from coursera.com
-Each directories should be named against the course it represents and contain a README explaining the
-purpose of each snippet of code. 
+Try to follow the following README template for each directories: 
 
-Try to follow the following template: 
 Course: Foo course
 
 Exercices:
-    Title
-    language
-    Objective
+    [Title]
+    [language]
+    [Objective]
     Explanation of the algorithm (not mandatory if code is self explanatory)
 
-    Title
-    Objective
+    [Title]
+    [language]
+    [Objective]
     Explanation of the algorithm
 
     ...
-
-
-
-Feel free to fork it and contribute to it.
-No particular language is required. 
 
 PS: Clean code is required :)
