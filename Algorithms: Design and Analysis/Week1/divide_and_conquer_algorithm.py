@@ -8,6 +8,7 @@ class MergeArray:
         self.f = open('merge_sort_input')
         self.f.seek(0)
         self.array =map(self.toInt, self.f.read().splitlines()) 
+        self.f.close()
 
     def toInt(self, x):
         return int(x)
