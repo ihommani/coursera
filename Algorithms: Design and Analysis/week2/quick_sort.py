@@ -27,7 +27,7 @@ class QuickSortArray:
             return array
         self.nb_of_comparison += len(array) - 1
         i = 1
-        pivot = self.define_pivot(array, self.strategy)
+        pivot = self.define_pivot(array, strategy)
         index_pivot = array.index(pivot)
         
         self.swap(array, index_pivot, 0)
@@ -35,7 +35,7 @@ class QuickSortArray:
             if  pivot > array[j]:
                 self.swap(array, j, i)
                 i += 1
-        self.swap(array, index_pivot, i-1)
+        self.swap(array, 0, i-1)
         sorted_array.extend(self.partition(array[0:i-1], strategy))
         sorted_array.append(array[i-1])
         sorted_array.extend(self.partition(array[i:], strategy))
@@ -45,7 +45,7 @@ class QuickSortArray:
         if self.strategies[strategy] == "FIRST":
             return array[0]
         elif self.strategies[strategy] == "LAST":
-            return array[len(array) - 1]
+            return array[len(array) -  1] 
         elif self.strategies[strategy] == "MEDIAN":
             if len(array) % 2 == 1: 
                 return self.median_of_three(array[0], array[len(array)/2], array[len(array)-1])
@@ -69,6 +69,6 @@ class QuickSortArray:
         return array
 
 if __name__ == "__main__":
-    t = QuickSortArray(1) 
+    t = QuickSortArray(3) 
     print t.sort()
     print t.nb_of_comparison
