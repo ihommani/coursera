@@ -1,6 +1,8 @@
 #! /usr/bin/env python
 #-*- coding: ISO-8859-15 -*-
 
+import random
+
 class QuickSortArray:
     def __init__(self, strategy = 1):
         self.f = open('quick_sort_input')
@@ -9,7 +11,7 @@ class QuickSortArray:
         self.f.close()
         self.nb_of_comparison = 0
         self.strategy = strategy
-        self.strategies = {1: "FIRST", 2: "LAST", 3: "MEDIAN"}
+        self.strategies = {1: "FIRST", 2: "LAST", 3: "MEDIAN", 4: "SHUFFLE"}
 
     def toInt(self, x):
         return int(x)
@@ -52,6 +54,8 @@ class QuickSortArray:
             else:
                 return self.median_of_three(array[0], array[(len(array)/2) - 1], array[len(array)-1])
             return array
+        elif self.strategies[strategy] == "SHUFFLE":
+            return random.choice(array)
         else:
             return
 
@@ -69,6 +73,6 @@ class QuickSortArray:
         return array
 
 if __name__ == "__main__":
-    t = QuickSortArray(3) 
+    t = QuickSortArray(4) 
     print t.sort()
     print t.nb_of_comparison

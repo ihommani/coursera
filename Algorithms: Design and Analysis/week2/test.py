@@ -24,6 +24,10 @@ class TestMergeSort(unittest.TestCase):
         sorter = QuickSortArray(3)
         self.assertEqual(sorter.sort(self.toSort), range(100))
 
+    def test_shuffle_uniform(self):
+        sorter = QuickSortArray(4)
+        self.assertEqual(sorter.sort(self.toSort), range(100))
+
     @unittest.expectedFailure
     def test_shuffle_middle(self):
         sorter = QuickSortArray(3)
