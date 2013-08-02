@@ -44,13 +44,3 @@ class MergeArray:
             array[0] = temp
             self.inversions += 1
         return array     
-
-
-if __name__ == "__main__":
-    a = ['45', '4', '2', '6']
-    t = MergeArray()
-    print t.sort()
-    print t.inversions
-    
-    
-
